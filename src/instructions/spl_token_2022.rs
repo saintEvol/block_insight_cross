@@ -111,10 +111,6 @@ pub enum TokenInstruction {
     ///   1. `[writable]` The destination account.
     ///   2. `[]` The source account's multisignature owner/delegate.
     ///   3. ..`3+M` `[signer]` M signer accounts.
-    #[deprecated(
-        since = "4.0.0",
-        note = "please use `TransferChecked` or `TransferCheckedWithFee` instead"
-    )]
     Transfer {
         /// The amount of tokens to transfer.
         amount: u64,

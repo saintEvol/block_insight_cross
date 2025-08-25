@@ -6,6 +6,7 @@ pub mod instruction_parser;
 pub mod pubkeys;
 pub mod token_transfer_data;
 pub mod transaction;
+pub mod api;
 // fn parse_tip(
 //     transaction_accounts: &[Vec<u8>],
 //     instruction: &CompiledInstruction,

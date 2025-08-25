@@ -15,6 +15,8 @@ use std::borrow::Cow;
 use std::ops::Deref;
 use thiserror::Error;
 use tracing::error;
+#[cfg(feature = "serde-traits")]
+use serde::{Deserialize, Serialize};
 
 // #[cfg_attr(feature = "serde-traits", derive(Serialize, Deserialize))]
 // #[cfg_attr(

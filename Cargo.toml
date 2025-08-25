@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 thiserror = "2.0"
+rust_utils = { git = "https://github.com/saintEvol/rust_utils.git", features = ["http_types"] }
 anyhow = "1.0"
 tracing = "0.1"
 bs58 = "0.5"
@@ -18,8 +19,11 @@ solana-transaction-error = "2.2"
 serde = "1.0"
 solana-pubkey = "2.4"
 serde_with = {version = "3.14", optional = true}
+reqwest = { version = "0.12", optional = true }
+once_cell = {version = "1.21", optional = true}
+parking_lot = {version = "0.12", optional = true}
 
 [features]
-
 serde = ["serde-traits"]
 serde-traits = ["spl-token-2022/serde-traits", "dep:serde_with", "solana-system-interface/serde"]
+client = ["reqwest/json", "dep:once_cell", "dep:parking_lot"]
